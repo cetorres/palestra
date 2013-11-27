@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Palestra Móvel</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="author" content="Carlos Eugênio Torres (cetorres@cetorres.com)">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link href="img/iphone.png" sizes="57x57" rel="apple-touch-icon">
+<link href="img/iphone_retina.png" sizes="114x114" rel="apple-touch-icon">
+<link rel="stylesheet" href="components/lungo/lungo.css">
+<link rel="stylesheet" href="components/lungo/lungo.icon.css">
+<link rel="stylesheet" href="components/lungo/lungo.theme.css">
+<link rel="stylesheet" href="components/rating/rating.css">
+<link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+	
+<aside id="menu" data-transition="left">
+    <header data-title="Palestra Móvel">
+    </header>
+    <article class="list scroll active">
+        <ul>
+			<li data-view-section="section-palestra" data-icon="desktop">Palestra</li>
+			<li data-view-section="section-twitter" data-icon="twitter">Twitter</li>
+			<li data-view-section="section-avaliacao" data-icon="ok-sign">Avaliação</li>
+            <li data-view-section="section-info" data-icon="info-sign">Mais informações</li>
+			<li data-view-section="section-entrada" data-icon="signout">Sair</li>
+        </ul>
+    </article>
+</aside>
+	
+<section id="section-entrada" data-transition="slide">
+	<header data-title="Palestra Móvel">
+		<nav class="on-right">
+			<a href="#" data-view-section="section-info" data-icon="info-sign"></a>
+		</nav>		
+    </header>
+    <article id="article-entrada" class="scroll list indented active">
+		<ul>
+			<li>
+				<div class="text tiny">Bem-vindo(a) ao Palestra Móvel. Sistema móvel para apoio a palestras e interação entre o palestrante e o público.</div>
+			</li>
+			<li>
+				<div class="text tiny">Palestra: Mobilidade - computação móvel, dispositivos e aplicativos.</div>
+			</li>
+			<li>
+				<div class="text tiny">Selecione o local da palestra:</div>
+			</li>
+		</ul>		
+		<p class="margin">
+			<a href="#" id="button5" class="button anchor margin-bottom" data-label="INFOBRASIL"></a>
+			<br/>
+			<a href="#" id="button4" class="button anchor margin-bottom" data-label="UNIFOR"></a>
+			<br/>
+			<a href="#" id="button3" class="button anchor margin-bottom" data-label="ATENEU - FATE"></a>
+			<br/>
+			<a href="#" id="button1" class="button anchor margin-bottom" data-label="FA7"></a>
+			<br/>
+			<a href="#" id="button2" class="button anchor margin-bottom" data-label="FAMETRO"></a>
+		</p>
+    </article>
+	<footer>
+		<div align="center">&copy; 2013 Carlos Eugênio Torres</div>
+	</footer>
+</section>
+
+<section id="section-palestra" data-transition="slide" data-aside="menu" class="drag">
+	<header data-title="Palestra">
+		<nav>
+			<button data-view-aside="menu" data-icon="menu"></button>
+	    </nav>			
+    </header>
+    <article id="article-palestra" class="scroll list indented active">
+		<ul>
+			<li>
+				<div class="text"><span id="palestra_nome"></span></div>
+				<div class="text tiny opacity">Local: <span id="local"></span></div>
+				<div class="text tiny opacity">Palestrante: <span id="palestrante"></div>
+			</li>
+		</ul>
+		<div>
+			<iframe src="http://www.slideshare.net/slideshow/embed_code/26471436" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="260"></iframe>			
+		</div>
+    </article>
+</section>
+
+<section id="section-twitter" data-pull="angle-down" data-transition="slide" data-aside="menu" class="drag">
+	<header data-title="Twitter">
+		<nav>
+			<button data-view-aside="menu" data-icon="menu"></button>
+	    </nav>
+		<nav class="on-right">
+			<a href="#" id="button-compose" data-icon="edit"></a>
+		</nav>
+    </header>
+    <article id="article-twitter" class="scroll indented list active">
+        
+    </article>
+</section>
+
+<section id="section-avaliacao" data-transition="slide" data-aside="menu" class="drag">
+	<header data-title="Avaliação">
+		<nav>
+			<button data-view-aside="menu" data-icon="menu"></button>
+	    </nav>
+    </header>
+    <article id="article-avaliacao" class="scroll list indented active">
+		<ul>
+			<li>
+				<div class="text">O que achou da palestra? Por favor avalie os aspectos abaixo.</div>
+			</li>
+			<li style="height:165px">
+				<div class="text tiny">
+					<div class="on-right">
+						<div id="conteudo-stars" class="rating" style="padding-bottom:1.9em">&nbsp;</div>
+						<div id="palestrante-stars" class="rating" style="padding-bottom:1.9em">&nbsp;</div>
+						<div id="relevancia-stars" class="rating" style="padding-bottom:1.9em">&nbsp;</div>
+						<div id="aplicativo-stars" class="rating" style="padding-bottom:1.9em">&nbsp;</div>
+					</div>
+					<div class="on-left">
+						<div class="rating">Conteúdo da palestra</div>
+						<div class="rating">O palestrante</div>
+						<div class="rating">Relevância para você</div>
+						<div class="rating">Este aplicativo</div>
+					</div>	
+				</div>	
+			</li>
+		</ul>
+    </article>
+	<article id="article-avaliacao-resultado" class="scroll list indented">
+		<ul>
+			<li>
+				<div class="text">Veja o resultado da avaliação abaixo. As notas vão de 1 a 5.</div>
+			</li>
+			<li style="height:165px">
+				<div class="text tiny">
+					<div class="on-right">
+						<div id="conteudo-stars-resultado" class="rating" style="padding-bottom:1.9em">&nbsp;</div>
+						<div id="palestrante-stars-resultado" class="rating" style="padding-bottom:1.9em">&nbsp;</div>
+						<div id="relevancia-stars-resultado" class="rating" style="padding-bottom:1.9em">&nbsp;</div>
+						<div id="aplicativo-stars-resultado" class="rating" style="padding-bottom:1.9em">&nbsp;</div>
+					</div>
+					<div class="on-left">
+						<div class="rating">Conteúdo da palestra</div>
+						<div class="rating">O palestrante</div>
+						<div class="rating">Relevância para você</div>
+						<div class="rating">Este aplicativo</div>
+					</div>							
+				</div>	
+			</li>
+		</ul>
+	</article>
+	<footer>
+		<nav>
+			<a href="#" data-view-article="article-avaliacao" data-title="Avaliação" class="active">Avaliação</a>
+			<a href="#" data-view-article="article-avaliacao-resultado" data-title="Resultado">Resultado</a>
+		</nav>
+	</footer>
+</section>
+
+<section id="section-info" class="splash" data-transition="cover" data-aside="menu">
+	<header data-back="chevron-left" data-title="Informações">
+    </header>
+    <article id="article-info" class="scroll list indented active">
+		<ul>
+			<li>
+				<div class="text"><strong>Palestra Móvel</strong></div>
+				<div class="text tiny">Sistema móvel para apoio a palestras e interação entre o palestrante e o público.</div>
+			</li>
+			<li class="thumb">
+				<img src="http://a0.twimg.com/profile_images/344513261566841134/97b4d95550c3e4156f173a8a6920d135_normal.jpeg">
+				<div>
+					<span class="text">Carlos Eugênio Torres</span><br/>
+					<span class="text tiny opacity">Engenheiro de Computação</span>				
+				</div>
+			</li>
+		</ul>	
+		<p>
+			<a href="http://cetorres.com" class="button anchor margin-bottom" data-icon="globe" target="_blank">http://cetorres.com</a><br/>
+			<a href="mailto:cetorres@cetorres.com" class="button anchor margin-bottom" data-icon="envelope">cetorres@cetorres.com</a><br/>
+			<a href="http://twitter.com/cetorres" class="button anchor margin-bottom" data-icon="twitter" target="_blank">@cetorres</a><br/>
+			<a href="http://facebook.com/carloseugeniotorres" class="button anchor margin-bottom" data-icon="facebook" target="_blank">carloseugeniotorres</a>		
+		</p>
+    </article>
+</section>
+
+<script src="components/rating/jquery-2.0.3.min.js"></script>
+<script src="components/quo/quo.js"></script>
+<script src="components/lungo/lungo.js"></script>
+<script src="components/rating/rating.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
