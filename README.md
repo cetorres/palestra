@@ -10,3 +10,5 @@ It allows the spectators to better interact with me throught:
 3. Lecture evaluatation feedback, allowing spectators to vote on many aspects of the presentation
 
 Working demo: http://cacira.com.br/palestra/
+
+My Slideshare profile with all my presentations: http://www.slideshare.net/cetorres/
